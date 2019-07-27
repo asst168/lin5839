@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>shop</title>
+<script Language="Javascript">
+<!-- hide
+//declare variables
+//start of actions by button
+function elemList() {
+	var qtt=0; 
+	var amt=0; 
+	var tota=0; 
+	var total=0; 
+	var xleft = (screen.width/2)-(700/2);
+	newWin=window.open("","win", "left="+xleft+",top=20,width=700,height=550,scrollbars=yes,resizable=yes");
+	newWin.document.write("")   //Shopping Cart
+	//starting scripts located in header 
+	newWin.document.write('<','!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">','\n')
+	newWin.document.write('<','html','>','\n')
+	newWin.document.write('<','head','>','\n')
+	newWin.document.write('<','meta http-equiv=','\"content-type\"')
+	newWin.document.write(' content=','\"text/html',';')
+	newWin.document.write(' charset=utf-8\">','\n')
+	newWin.document.write('<','title>','感謝您的採購','<','/title>','\n')  //Title of Shopping Menu
+	newWin.document.write('<','meta name=','\"generator\"','>','\n')
+	newWin.document.write('<','script Language=\"Javascript\">','\n')
+	newWin.document.write('<','!--hide','\n')
+	newWin.document.write('function CheckFields','(pform)',' {','\n')                //evaluating input data
+	newWin.document.write('if','(pform.emails.value.length <= 6 ||')
+	newWin.document.write('pform.emails.value.indexOf (\'@\'\, 0) == -1 ||','\n')
+	newWin.document.write('pform.emails.value.indexOf (\'.\'\, 0) == -1')
+	newWin.document.write('){','\n')
+	newWin.document.write('alert(\" 請輸入您的個人資料 \")','\n')
+	newWin.document.write('return false;','\n')
+	newWin.document.write('}','\n')
+	newWin.document.write('else {','\n')
+	newWin.document.write('alert (\"傳送確認 \")','\n')
+    newWin.document.write('pform.action=\"mailto:lin6228@ms1.hinet.net\"','\n') //email address to order
+	//newWin.document.write('location.href=\"http\://javascripts\.com\"','\n') //suppliers' confirm
+    newWin.document.write('return true;','\n')
+	newWin.document.write('}','\n')
+	newWin.document.write('}','\n')
+	newWin.document.write('//hideend','--','>','\n')
+	newWin.document.write('<','/script>','<','/head>','\n')
+//End of header
+//Starting of Body scripts
+	newWin.document.write('<','body')
+	newWin.document.write(' bgcolor=\"white\" text=\"black\" link=\"blue\" vlink=\"purple\" alink=\"red\"')
+	newWin.document.write(' topmargin=\"0\" leftmargin=\"0\" marginwidth=\"0\" marginheight=\"0\">','\n')
+	newWin.document.write('<','div align=\"center\">','\n')
+//	newWin.document.write('<','br>','\n')
+//	newWin.document.write('<','br>','\n')
+	newWin.document.write('<','table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"600\">','\n')
+	newWin.document.write('<tr>','\n')
+	newWin.document.write('<','form name=\"pform\" method=\"post\" enctype=\"text/plain\" onsubmit=\"JavaScript:return CheckFields(this);\">','\n')
+	newWin.document.write('<td width=\"499\" height=\"12\" align=\"center\" valign=\"top\" colspan=\"5\" bgcolor=\"#006600\">','\n')  
+	newWin.document.write('</td></tr>','\n')
+for (i=0;i<=6;i++){						//same value with the kinds of products
+if (document.count.products[i].checked){  
+newWin.document.write('<tr>','\n')
+newWin.document.write('<td width=\"303\" colspan=\"2\">','\n')
+newWin.document.write('<p align=\"left\">','\n')
+newWin.document.write('<font face=\"tahoma\" size=\"2\">','\n')
+newWin.document.write('<','input type=','\"','hidden','\"')
+newWin.document.write(' name=','\"',(i+1),'\"',' value=')
+newWin.document.write('\"',(document.count.products[i].value),'\"')
+newWin.document.write('>')
+newWin.document.write(document.count.products[i].value);  //auto-lisitng of products selected
+newWin.document.write("***");               // marker
+newWin.document.write('</font></td>','\n')
+newWin.document.write('<td width=\"71\">','\n')
+newWin.document.write('<p align=\"left\">','\n')
+newWin.document.write('<font face=\"tahoma\" size=\"2\">','\n')
+
+newWin.document.write(document.count.qtty[i].value);      //auto-listing of quantity of the selected products
+newWin.document.write(" 套 ");                           //unit indicater
+newWin.document.write("  :  ");                           // marker
+newWin.document.write('</font></td>','\n')
+newWin.document.write('<td width=\"35\">','\n')
+newWin.document.write('<p align=\"right\">','\n')
+newWin.document.write('<font face=\"tahoma\" size=\"2\">','\n')
+newWin.document.write('<i','nput type=','\"','hidden','\"')
+newWin.document.write(' name=','\"','order','\"',' value=')
+newWin.document.write('\"',(document.count.qtty[i].value),'\"')
+newWin.document.write('>')
+newWin.document.write('</font></td>','\n')
+
+newWin.document.write('<td width=\"90\">','\n')
+newWin.document.write('<p align=\"right\">','\n')
+newWin.document.write('<b><font face=\"tahoma\" size=\"2\">','\n')
+
+ qtt= (document.count.qtty[i].value);         //quantity variable for calulating total
+ amt= (document.count.price[i].value);        //unit price variable for calculating total
+ tota= qtt*amt;
+ total+=tota ;
+
+newWin.document.write(tota);                  //amount for items
+ tota=0 ;                                     //variable for calculating loop of total
+newWin.document.write('</b><br>');                
+newWin.document.write('</font></td>','\n')
+}
+ else {}
+if (i==6) break ;				//value of the number of products minus one
+
+}
+
+newWin.document.write('</tr>','\n')
+newWin.document.write('<tr>','\n')
+newWin.document.write('<td colspan=\"5\">','\n')
+newWin.document.write('<p align=\"left\">','\n')
+newWin.document.write('<font face=\"tahoma\" size=\"2\">','\n')
+newWin.document.write('<','input type=','\"','checkbox','\"')
+newWin.document.write(' name=','\"','total','\"','  value=')
+newWin.document.write('\"',(total),'\"')
+newWin.document.write(' checked>')
+newWin.document.write('</font>','\n')
+newWin.document.write('<font face=\"tahoma\" size=\"2\">','\n')
+newWin.document.write("<b>採購總額 = ");  //indicationg Total
+newWin.document.write(total);                            // value of total calculated
+//newWin.document.write(" Korean Won</b>");            // 
+newWin.document.write('</font>','\n')
+newWin.document.write('</td></tr>','\n')
+
+
+//hide_delete
+
+		newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"499\" height=\"25\" colspan=\"5\" bgcolor=\"#006600\">','\n')
+        newWin.document.write('<p align=\"center\"><font face=\"tahoma\" size=\"3\" color=\"white\"><b>請輸入您的聯絡資料</b>','</font>','\n')
+        newWin.document.write('</td></tr>','\n')
+		newWin.document.write('<tr>','\n')
+		newWin.document.write('<td width=\"499\" height=\"15\" colspan=\"5\" bgcolor=\"#D2DFCE\">','\n')
+		newWin.document.write('</td></tr>','\n')
+
+		newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"131\" height=\"15\" valign=\"top\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\"><b>&nbsp;</b></font>','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\"> 姓名:&nbsp;&nbsp;</font></td>','\n')
+        newWin.document.write('<td width=\"368\" height=\"15\" valign=\"top\" colspan=\"4\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"#006600\">','\n')
+        newWin.document.write('<','input type=\"text\" name=\"Payer\"  maxlength=\"20\"> </font></td>','\n')
+    	newWin.document.write('</tr>','\n')
+    
+    	newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"131\" height=\"15\" valign=\"top\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\"><b>&nbsp;</b></font>','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\">電話號碼:&nbsp;&nbsp;</font></td>','\n')
+        newWin.document.write('<td width=\"368\" height=\"15\" valign=\"top\" colspan=\"4\"  bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"#FF0000\">','\n')
+        newWin.document.write('<i','nput type=\"text\" name=\"telephone\" maxlength=\"20\" size=\"20\">&nbsp; * 此欄位，請務必輸入</font></td>','\n')
+    	newWin.document.write('</tr>','\n')
+    	newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"131\" height=\"15\" valign=\"top\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\"><b>&nbsp;</b></font>','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\">電子郵件帳號:&nbsp;&nbsp;</font></td>','\n')
+        newWin.document.write('<td width=\"368\" height=\"15\" valign=\"top\" colspan=\"4\"  bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"#FF0000\">','\n')
+        newWin.document.write('<','input type=\"text\" name=\"emails\" maxlength=\"25\" size=\"25\">&nbsp; * 此欄位，請務必輸入</font></td>','\n')
+    	newWin.document.write('</tr>','\n')
+    	newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"131\" valign=\"top\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\"><b>&nbsp;</b></font>','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\">聯絡地址:&nbsp;</font></td>','\n')
+        newWin.document.write('<td width=\"368\" valign=\"top\" colspan=\"4\"  bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"#006600\">','\n')
+        newWin.document.write('<','textarea name=\"address\" rows=\"3\" cols=\"40\"></textarea> </font></td>','\n')
+    	newWin.document.write('</tr>','\n')
+    	newWin.document.write('<tr>','\n')
+        newWin.document.write('<td width=\"131\" valign=\"top\" bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<td width=\"368\" valign=\"top\" colspan=\"4\"  bgcolor=\"#D2DFCE\">','\n')
+        newWin.document.write('<p align=\"left\">','\n')
+        newWin.document.write('<font face=\"Arial\" size=\"2\" color=\"black\">','\n')
+        //javascript_pair_delete
+  		newWin.document.write('<','input type=\"submit\" name=\"Submit\" value=\"啟動電子郵件傳送資料\"> </font></td>','\n')
+  		newWin.document.write('</tr>','\n')
+		newWin.document.write('<','/form>','\n')
+		newWin.document.write('<','/table></div>','\n')
+		newWin.document.write('<','/body>','\n')
+		newWin.document.write('<','/html>','\n')
+//hide_end_delete
+
+}
+
+// end of javascrpits
+
+//end of hide-->
+
+</script></head>
+
+<body bgcolor="white" text="black" link="#0000FF" vlink="#800080" alink="#FF0000" topmargin="2"
+ leftmargin="2" marginwidth="0" marginheight="0" rightmargin="2" bottommargin="2">
+
+<form name="count" method="get">
+<input type=hidden name="price" value="18000">
+<input type=hidden name="price" value="6000">
+<input type=hidden name="price" value="2400">
+<input type=hidden name="price" value="2400">
+<input type=hidden name="price" value="12000">
+<input type=hidden name="price" value="18000">
+<input type=hidden name="price" value="20000">
+<p align="left"><font face="Arial" size="2"> &nbsp;</font><div align="center">
+	<table border="1" cellspacing="0" width="600" bordercolorlight="#FFFFFF" cellpadding="0" bordercolordark="#C0C0C0"> 
+    <tr>
+        <td width="203" height="18" bgcolor="#FF0000" align="center">
+		<p style="margin-left:12px;">
+		<b><font face="&#32048;&#26126;&#39636;" style="font-size: 11pt" color="#FFFFFF">
+		產品名稱</font></b></td>
+        <td width="56" height="18" bgcolor="#FF0000" align="center"><p align="left">
+		<font face="&#32048;&#26126;&#39636;" style="font-size: 11pt" color="#FFFFFF"><b>   
+		訂購</b></font></td>
+        <td width="83" height="18" bgcolor="#FF0000" align="center"><p align="left">
+		<font face="&#32048;&#26126;&#39636;" style="font-size: 11pt" color="#FFFFFF"><b>  
+		數量</b></font></td>
+        <td height="18" bgcolor="#FF0000" align="center"><p align="center" style="margin-right:12px;">
+		<font
+             face="&#32048;&#26126;&#39636;" style="font-size: 11pt" color="#FFFFFF"><b>      
+		單價</b></font></td>
+        <td width="144" height="18" bgcolor="#FF0000" align="center"><p align="center">
+		<b><font face="細明體" style="font-size: 11pt" color="#FFFFFF">產品說明</font></b></td>
+    </tr>
+    <tr>
+        <td width="203" height="24"><p align="left" style="margin-left:12px;"><font style="font-size: 11pt" face="Tahoma">01.進銷存作業系統(完整版)</font></td>
+        <td width="56" height="24"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="進銷存作業系統(完整版)"></font></td>
+        <td width="83" height="24"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td height="24"><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">18,000</font></b></td>
+        <td width="144" height="24">　</td>
+    </tr>
+    <tr>
+        <td width="203" bgcolor="#E5E5E5"><p align="left" style="margin-left:12px;"><font style="font-size: 11pt" face="Tahoma">02.進銷存作業系統(精簡版)</td>
+        <td width="56" bgcolor="#E5E5E5"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="進銷存作業系統(精簡版)"></font></td>
+        <td width="83" bgcolor="#E5E5E5"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td bgcolor="#E5E5E5"><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">6,000</font></b></td>
+        <td width="144" bgcolor="#E5E5E5">　</td>
+    </tr>
+    <tr>
+        <td width="203"><p align="left" style="margin-left:12px;"><font style="FONT-SIZE: 11pt" face="Tahoma">03.標籤列印</font></td>
+        <td width="56"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="標籤列印"> </font></td>
+        <td width="83"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">2,400</font></b></td>
+        <td width="144">　</td>
+    </tr>
+    <tr>
+        <td width="203"><p align="left" style="margin-left:12px;"><font style="FONT-SIZE: 11pt" face="Tahoma">04.支票列印</font></td>
+        <td width="56"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="支票列印"> </font></td>
+        <td width="83"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">2,400</font></b></td>
+        <td width="144">　</td>
+    </tr>
+    <tr>
+        <td width="203" bgcolor="#E8E4E8"><p align="left" style="margin-left:12px;"><font style="font-size: 11pt" face="Tahoma">05.廟宇作業系統</font></td>
+        <td width="56" bgcolor="#E8E4E8"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="廟宇作業系統"></font></td>
+        <td width="83" bgcolor="#E8E4E8"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td bgcolor="#E8E4E8"><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">12,000</font></b></td>
+        <td width="144" bgcolor="#E8E4E8">　</td>
+    </tr>
+    <tr>
+        <td width="203"><p align="left" style="margin-left:12px;"><font style="FONT-SIZE: 11pt" face="Tahoma">06.教養院院生管理系統</font></td>
+        <td width="56"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="教養院作業系統"> </font></td>
+        <td width="83"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">18,000</font></b></td>
+        <td width="144">　</td>
+    </tr>
+    <tr>
+        <td width="203" bgcolor="#E8E4E8"><p align="left" style="margin-left:12px;"><font style="font-size: 11pt" face="Tahoma">07.職業工會作業系統</font></td>
+        <td width="56" bgcolor="#E8E4E8"><p align="left"><font face="Arial" size="2"><input type="checkbox" name="products" value="職業工會作業系統"></font></td>
+        <td width="83" bgcolor="#E8E4E8"><p align="left"><font face="Arial" size="2"><input type="text" name="qtty" value="1" maxlength="3" size="2"></font></td>
+        <td bgcolor="#E8E4E8"><p align="right" style="margin-right:20px;"><b><font face="Tahoma" size="2">20,000</font></b></td>
+        <td width="144" bgcolor="#E8E4E8">　</td>
+    </tr>
+    </table></div>
+	<p align="center"><input type="button" name="buttonName" value="採    購" onclick="elemList()">  |  <input type="reset" value="重新採購"></p>
+</form>
+</body>
+</html>
