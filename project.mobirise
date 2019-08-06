@@ -39,20 +39,20 @@
     ],
     "versionFirst": "4.7.6",
     "uniqCompNum": 5,
-    "versionPublish": "4.10.6",
+    "versionPublish": "4.10.7",
     "screenshot": "screenshot.png",
     "favicon": "",
-    "noImageResize": "true",
+    "noImageResize": "",
     "google-analytics": "",
     "cookiesAlert": "",
-    "gdpr": "",
+    "gdpr": "By continiung you agree to our <a href='terms.html'>Terms of Service</a> and <a href='policy.html'>Privacy Policy</a>.",
     "siteUrl": "undefined"
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "lin5839",
+        "title": "系統服務",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
