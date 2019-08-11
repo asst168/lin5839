@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster:400);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700);
 
 
 
@@ -21,21 +21,21 @@ body {
   line-height: 1.6;
 }
 .display-1 {
-  font-family: 'Lobster', display;
+  font-family: 'Rubik', sans-serif;
   font-size: 4.25rem;
 }
 .display-1 > .mbr-iconfont {
   font-size: 6.8rem;
 }
 .display-2 {
-  font-family: 'Lobster', display;
-  font-size: 3rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
 }
 .display-2 > .mbr-iconfont {
-  font-size: 4.8rem;
+  font-size: 3.2rem;
 }
 .display-4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1rem;
 }
 .display-4 > .mbr-iconfont {
@@ -67,9 +67,9 @@ body {
     line-height: calc( 1.4 * (2.1374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-2 {
-    font-size: 2.4rem;
-    font-size: calc( 1.7rem + (3 - 1.7) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.7rem + (3 - 1.7) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 1.6rem;
+    font-size: calc( 1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-4 {
     font-size: 0.8rem;
