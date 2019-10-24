@@ -44,17 +44,6 @@
     "favicon": "",
     "noImageResize": "",
     "google-analytics": "",
-    "cookiesAlert": {
-      "customDialogSelector": false,
-      "colorText": "#424a4d",
-      "colorBg": "#eaeff1",
-      "colorButton": "",
-      "colorLink": "#424a4d",
-      "underlineLink": true,
-      "opacity": "99",
-      "text": "We use cookies to give you the best experience. Read our <a href='privacy.html'>cookie policy</a>.",
-      "textButton": "Agree"
-    },
     "gdpr": {
       "colorText": "#a7a7a7",
       "colorLink": "#149dcc",
