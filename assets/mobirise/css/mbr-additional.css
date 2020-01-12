@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
 
@@ -9,12 +10,12 @@ body {
   font-family: Rubik;
 }
 .display-1 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 4rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 5rem;
   font-display: swap;
 }
 .display-1 > .mbr-iconfont {
-  font-size: 6.4rem;
+  font-size: 8rem;
 }
 .display-2 {
   font-family: 'Rubik', sans-serif;
@@ -25,12 +26,12 @@ body {
   font-size: 4.16rem;
 }
 .display-4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
   font-display: swap;
 }
 .display-4 > .mbr-iconfont {
-  font-size: 1.6rem;
+  font-size: 3.2rem;
 }
 .display-5 {
   font-family: 'Oswald', sans-serif;
@@ -55,9 +56,9 @@ body {
 /* 0.65 - min scale variable, may vary */
 @media (max-width: 768px) {
   .display-1 {
-    font-size: 3.2rem;
-    font-size: calc( 2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 4rem;
+    font-size: calc( 2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (2.4rem + (5 - 2.4) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-2 {
     font-size: 2.08rem;
@@ -65,9 +66,9 @@ body {
     line-height: calc( 1.4 * (1.56rem + (2.6 - 1.56) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-4 {
-    font-size: 0.8rem;
-    font-size: calc( 1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 1.6rem;
+    font-size: calc( 1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-5 {
     font-size: 1.2rem;
@@ -712,7 +713,11 @@ section.lazy-placeholder:after {
   opacity: 0.3;
 }
 .cid-rNjkdfJiw9 {
-  background-image: url("../../../assets/images/background4.jpg");
+  background-image: url("../../../assets/images/2020-1.png");
+}
+.cid-rNjkdfJiw9 .mbr-text,
+.cid-rNjkdfJiw9 .mbr-section-btn {
+  color: #ff3366;
 }
 .cid-rNjkj7X43v {
   padding-top: 45px;
