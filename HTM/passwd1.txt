@@ -1,0 +1,96 @@
+JavaScript: 密碼保護網頁
+約瑟 發表
+
+
+
+在這單元我們會講到網頁的密碼保護。我會舉三種方式來讓大家比較看哪種寫法最安全。
+密碼寫在程式本身裡面。
+用prompt()來遮掩密碼程式。
+用保護網頁的網址來當密碼。
+以上這三種是我們這次要介紹的。當然還有其他種的方法可以保護網頁, 像是 "以陣列將密碼亂碼化" 。 再上面三種, 很明顯第一種是最容易被破解進去的, 只要打開原始檔就可以看到密碼了。
+
+而第二和第三種是比較難破解, 除非你有駭客別人電腦的經驗, 要不然普通人比較難解。
+Ok, 廢話不多說, 我們趕快開始吧!
+
+
+STEP1:【第一種: 密碼寫在程式本身】
+如同前提所說的, 這種寫法是最容易被破解的。讓我們來看看程式碼你就知道為什麼了。
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+function password(pwd)
+{
+
+if(pwd=="123")
+{
+alert("Welcome to my homepage!");
+location.href=".";
+}
+else
+
+{
+alert("Denied !");
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<form name=myform onsubmit="password(this.pwde.value)">
+<input type="text" name="pwde" rows="1" size="20">
+<input type="submit" name="submit" value="Submit">
+</form>
+</BODY>
+</HTML>
+程式執行結果按這裡。(密碼: 123)
+像這種程式只是簡單的一種問和答的方式寫出來的。當我們在<form>裡面的值不等於我們 再<HEAD>裡面程式中設的值, 我們就無法進入(Denied)。所以, 想要知道密碼, 只要從原始碼裡面就看的到了。
+
+STEP2:【第二種: 用prompt()來遮掩密碼程式】
+在這個程式裡面, 我們用到prompt()這個方法來蓋住原始碼用。當程式開始執行的時候, 會跳出一個 小視窗要你輸入密碼。你不輸入密碼, 你就不能看到原始碼。以下是程式碼:
+<SCRIPT LANGUAGE="javascript">
+
+var password = prompt("請輸入密碼","")
+if (password=="123")
+{
+alert('Welcome!')
+location.href='.'
+}
+else
+{
+if (password=="null")
+{
+alert('請再輸入一次密碼');
+location.href='examples/javascript/16ex2.html';
+}
+else
+if (password!="123")
+{
+alert('請再輸入一次密碼');
+location.href='examples/javascript/16ex2.html';
+}
+}
+</SCRIPT>
+程式執行結果按這裡。(密碼: 123)
+如果我沒寫密碼出來, 你知道怎麼盜取密碼嗎?
+如同之前所提到的, 不容易取得密碼的原因是密碼是被 prompt() 出來的小視窗所蓋住的。
+接下來實際上也跟第一種的寫法差不多, 都是問與答的寫法。
+假如(if)password等於(==)123, 就會有個 alert() 出來 告訴你已經通過了, 然後連結在後面跟著。
+如果輸入錯或不輸入密碼呢? 再 else 裡面我們設了兩個if, 因為有兩種可能, 一個是輸入錯, 另一個是 不輸入密碼。
+不輸入密碼也就是按Cancel, 那麼作, password 就會變成 null, 然後就把訪客帶到同一頁上重新輸入一次。
+如果訪客隨便輸入個 'abc', 我們就設定說, 假如 password 不等於(!=) '123', 它又會請 你再輸入一次。
+
+STEP3:【第三種: 用保護網頁的網址來當密碼】
+這種寫法我想大概是這三個中最難破的了。在這種方法下, 除非對方有辦法進入你Server的資料夾 查看, 不然幾乎想猜都猜不到。這方法是由網頁的檔名來當作密碼。看下面程式碼就清楚我在說什麼了:
+<SCRIPT LANGUAGE="JavaScript">
+
+var password = ''
+password=prompt('輸入密碼:','');
+if (password != null) {
+location.href= password + ".html";
+}
+
+</SCRIPT>
+程式執行結果按這裡。(密碼: 16ex4)
+再以上的程式碼中, 我們可以看到, location.href="" 裡面寫的就是我們要輸入的密碼, 再加.html。 所以說, 只要我們知道我們要到保護的網頁的名稱, 打入網頁的檔名 (例如: 16ex4), 程式就會帶你去保護的網頁了。
+你可以試試看亂打或是不打密碼, 程式就不會連到保護的網頁。因為比如說你打: 1234, 而我的檔案夾裡面 沒有叫做 1234.html 的檔案, 這樣就進入不了保護的網頁了。很聰明的方法, 不是嗎?
+這單元大致上就是這樣了。用JavaScript來作保護網頁的方式是不會太差, 不過要是要用來作保護機密的程式, 我建議還是用其他比較嚴謹的語言吧! (像是 Java)
+最後更新日期: 7/25/2001 5:26:36 AM

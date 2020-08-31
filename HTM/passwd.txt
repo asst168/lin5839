@@ -1,0 +1,84 @@
+<SCRIPT>
+<!--
+password = prompt("請輸入登入密碼：","")
+if (password == 'test123') {
+self.location = 'pass.html'
+}
+else {
+self.location = 'wrong.html'
+}
+-->
+</SCRIPT>
+
+
+<HTML>
+<HEAD>
+<TITLE>設定登入網頁密碼</TITLE>
+<SCRIPT language="javascript">
+<!-- hide javascript from old browser
+var password = prompt("請輸入登入密碼﹖","")
+
+if (password == 'abc') {
+self.location = 'ok.html'
+}
+
+else {
+self.location = 'wrong.html'
+}
+
+// done hiding -->
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="#ffffff"> </BODY>
+</HTML>
+
+
+
+
+
+
+
+var password = prompt("請輸入登入密碼﹖","") : 
+將 問 題 匣 的 答 案 設 定 為 password 變 數 ﹐
+第 一 個 "" 內 的 是 問 題 匣 的 問 題 ﹐
+第 二 個 "" 內 的 是 答 案 預 設 值 ﹐
+通 常 不 設 定 的
+if (password == 'abc') 是 說 如 果 password 變 數 是 abc 的 話 ﹐ 便 做 {} 內 的 指 令
+self.location = 'ok.html' 是 將 目 前 視 窗 位 址 設 定 為 ok.html
+else 是 說 否 則 便 做 {} 內 的 指 令
+self.location = 'wrong.html' 是 將 目 前 視 窗 位 址 設 定 為 wrong.html
+所以登入網頁的密碼便是 abc 了 ！
+而 密 碼 正 確 便 去 ok.html ﹐ 不 正 確 做 去 wrong.html
+
+
+
+
+<html>
+<head>
+<title>設定登入網頁密碼</title>
+<script lauguage=javascript>
+var rightps = 0
+var password = prompt("請輸入登入密碼﹖","")
+storePS = new Array()
+storePS[0] = "password0"
+storePS[1] = "password1"
+storePS[2] = "password2"
+storePS[3] = "password3"
+
+for (var i=0; i<=storePS.length-1; i++) {
+if (password == storePS[i]) {
+rightps = 1
+}
+}
+
+if (rightps == '1') {
+self.location = 'ok.html'
+}
+else {
+self.location = 'wrong.html'
+}
+</script>
+</head>
+<body bgcolor="#ffffff">
+</body>
+</html>

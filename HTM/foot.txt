@@ -1,0 +1,62 @@
+        </tbody>
+    </table></div>
+	<div id="tablefooter">
+	  <div id="tablenav">
+			<div>
+				<img src="tinyimg/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
+				<img src="tinyimg/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
+				<img src="tinyimg/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
+				<img src="tinyimg/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
+			</div>
+			<div>
+				<select id="pagedropdown" name="D2"></select>
+			</div>
+			<div>
+				<a href="javascript:sorter.showall()">场陪ボ</a>
+			</div>
+		</div>
+		<div id="tablelocation">
+			<div>
+				<select onchange="sorter.size(this.value)" name="D3">
+				<option value="5">5</option>
+					<option value="10" selected="selected">10</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+				<span>–计砞﹚</span>
+			</div>
+			<div class="page">( 计 <span id="currentpage"></span> / 羆计 <span id="totalpages"></span> )</div>
+		</div>
+	</div>
+    </div>
+	</td>
+	</tr>
+	</table>
+</div>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+	var sorter = new TINY.table.sorter('sorter','table',{
+		headclass:'head',
+		ascclass:'asc',
+		descclass:'desc',
+		evenclass:'evenrow',
+		oddclass:'oddrow',
+		evenselclass:'evenselected',
+		oddselclass:'oddselected',
+		paginate:true,
+		size:10,
+		colddid:'columns',
+		currentid:'currentpage',
+		totalid:'totalpages',
+		startingrecid:'startrecord',
+		endingrecid:'endrecord',
+		totalrecid:'totalrecords',
+		hoverid:'selectedrow',
+		pageddid:'pagedropdown',
+		navid:'tablenav',
+		init:true
+	});
+</script>
+</body>
+</html>

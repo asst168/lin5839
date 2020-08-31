@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=big5" http-equiv="Content-Type" />
+<meta content="zh-tw" http-equiv="Content-Language" />
+<title>資料瀏覽</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+<div align="center">
+	<table border="0" width="760" cellspacing="0" cellpadding="0">
+	<tr>
+	<td>
+	<div id="tablewrapper" align="center">
+	<div id="tableheader">
+		<div class="search">
+			<select id="columns" onchange="sorter.search('query')" name="D1"></select>
+			<input type="text" id="query" onkeyup="sorter.search('query')" name="T1" size="20" />
+		</div>
+		<span class="details">
+			<div>紀錄筆數 <span id="startrecord"></span>-<span id="endrecord"></span> / 總筆數 <span id="totalrecords"></span></div>
+		</span>
+	</div>
+	<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" id="table" class="tinytable" style="width: 760px; border-bottom-style: solid">
+	<thead><tr>
